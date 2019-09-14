@@ -1,0 +1,8 @@
+# Latex error logs
+*.fdb_latexmk
+*.fls
+*.log
+*.aux
+*.synctex.gz
+
+output/*
