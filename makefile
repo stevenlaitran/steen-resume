@@ -11,4 +11,4 @@ pdf:
 	ls output | grep -v .pdf | xargs -I % rm -v output/%
 
 clean:
-	rm output/*
+	ls output | grep -v resume-example.pdf | xargs -I % rm -v output/%

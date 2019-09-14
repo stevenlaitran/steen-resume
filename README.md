@@ -6,7 +6,7 @@ Requires: A LaTeX distribution and GNU Make
 
 run `Make` lol, it will compile a pdf file in the output directory
 
-`make clean` will remove all files within the output
+`make clean` will remove all files within the output except for the example pdf
 
 # Example
 TBA
