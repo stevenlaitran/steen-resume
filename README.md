@@ -1,12 +1,14 @@
 # Steen Resume
-Steen Resume is a simple resume template built with LaTeX
+This is a simple resume framework written in LaTeX. Geared towards quick changes and easy compiliation, it is meant to easily update and change a resume compiled through a make command. 
 
 # To build
 Requires: A LaTeX distribution and GNU Make
 
-run `Make` lol, it will compile a pdf file in the output directory
+Commands:
 
-`make clean` will remove all files within the output except for the example pdf
+1) `make`
+
+2) `make clean` will remove all files within the output except for the example pdf
 
 # Example
 TBA
