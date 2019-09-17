@@ -11,6 +11,7 @@
 % Simple Resume wrapper
 % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\thispagestyle{empty}
 
 \documentclass[]{resume-class}
 
@@ -22,9 +23,15 @@
 
 % Education
 
-\begin{minipage}[t]{0.325\textwidth} 
+\begin{minipage}[t]{0.33\textwidth} 
 
 \input{sections/sidebar}
+
+\end{minipage}
+\hfill%
+\begin{minipage}[t]{0.63\textwidth}
+
+\input{sections/mainbar}
 
 \end{minipage}
 

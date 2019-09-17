@@ -39,7 +39,7 @@
         }
     \makebox[20pt][r]{}
     }
-    \vspace{4pt}
+    \vspace{8pt}
     \hrule
     \vspace{8pt}
 }
@@ -58,6 +58,9 @@
 \titleformat{\subsection}{
 \color{subheadings}\fontspec[]{Chivo}\fontsize{11pt}{13pt}\selectfont\bfseries\uppercase}{}{0em}{}
 
+\newcommand{\runsubsection}[1]{
+\color{subheadings}\fontspec{Chivo}\fontsize{11pt}{12pt}\selectfont\bfseries\uppercase {#1} \normalfont}
+
 % Descriptors command
 \newcommand{\descript}[1]{
 \color{subheadings}\raggedright\scshape\fontspec{Chivo}\fontsize{11pt}{13pt}\selectfont {#1 \\} \normalfont}
@@ -68,5 +71,5 @@
 
 % Bullet Lists with fewer gaps command
 \newenvironment{tightemize}{
-\vspace{-\topsep}\begin{itemize}\renewcommand\labelitemi{--}\itemsep1pt \parskip0pt \parsep0pt}
+\vspace{-\topsep}\begin{itemize}\renewcommand\labelitemi{-}\itemsep1pt \parskip0pt \parsep0pt}
 {\end{itemize}\vspace{-\topsep}}
