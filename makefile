@@ -7,7 +7,7 @@ pdf:
 	@echo -e Last name:'\t' $(last_name)
 	@echo -e '\n' "**********************************"
 	ls output | grep -v resume-example.pdf | xargs -I % rm -v output/%
-	(cd resume; pdflatex -jobname=$(first_name)_$(last_name)_resume_$(shell date "+%Y_%m_%d") -output-directory=../output resume-wrapper.tex)
+	(cd resume; lualatex -jobname=$(first_name)_$(last_name)_resume_$(shell date "+%Y_%m_%d") -output-directory=../output resume-wrapper.tex)
 	ls output | grep -v .pdf | xargs -I % rm -v output/%
 
 clean:
