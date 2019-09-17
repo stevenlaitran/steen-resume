@@ -9,7 +9,7 @@ The preloaded resume template is of my own design noticing how the resume templa
 More importantly, I hope that the resume accomplishes its design goals of being clean, simple, and able to draw attention to details.
 
 # To build
-Requires: A LaTeX2e and GNU Make
+Requires: A XƎTEX and GNU Make
 
 Commands:
 
