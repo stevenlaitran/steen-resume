@@ -6,20 +6,23 @@ To fully utilize git's functionality as a living resume hosting service, this te
 
 The preloaded resume template is of my own design noticing how the resume templates above might not address all the concerns that a computer science student may have, such as full keyword association for companies that scrape resumes and the ability to update different portions of a resume without looking through hundred of lines of tex. 
 
-More importantly, I hope that the resume accomplishes its design goals of being **clean**, **simple**, and have ability to **draw attention to details**.
+I hope that the resume accomplishes its design goals of being **clean**, **simple**, and have ability to **draw attention to details**.
 
 ## To build
 Requires: A LaTeX distribution and GNU Make 
+
 Note: The makefile is currently set to use LuaLaTeX to compile the pdf
 
 Commands:
 
 `make`
 
+This will output a pdf file in the output directory named appropriately based on the configs provided and the time it was compiled
+
 In the future I hope to add support for other tex distributions and add it to the makefile
 
 ## Example
-TBA
+![Resume Example](./Steen-Resume-example.png)
 
 #### Inspired by Cline-resume by @Rjected
 https://github.com/Rjected/Cline-Resume
