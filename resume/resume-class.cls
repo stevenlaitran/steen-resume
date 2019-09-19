@@ -20,6 +20,8 @@
 \usepackage[familydefault,light]{Chivo} %% Option 'familydefault' only if the base font of the document is to be sans serif
 \usepackage[default]{cantarell} %% Use option "defaultsans" to use cantarell as sans serif only
 \usepackage[T1]{fontenc}
+\setmainfont[Color=primary]{cantarell}
+
 
 %%%%%% Begin Sections commands
 
@@ -48,22 +50,22 @@
 \usepackage{titlesec}
 \titlespacing{\section}{0pt}{0pt}{0pt} 
 \titlespacing{\subsection}{0pt}{0pt}{0pt}
-\newcommand{\sectionsep}{\vspace{10pt}}
+\newcommand{\sectionsep}{\vspace{6pt}}
 
 % Headings command
 \titleformat{\section}{\color{headings}
-\scshape\fontspec[]{Chivo}\fontsize{16pt}{24pt}\selectfont \raggedright}{}{0em}{}
+\scshape\fontspec{Chivo}\fontsize{16pt}{24pt}\selectfont \raggedright}{}{0em}{}
 
 % Subheadings command
 \titleformat{\subsection}{
-\color{subheadings}\fontspec[]{Chivo}\fontsize{11pt}{13pt}\selectfont\bfseries\uppercase}{}{0em}{}
+\color{subheadings}\fontspec{Chivo}\fontsize{11pt}{12pt}\selectfont\bfseries\uppercase}{}{0em}{}
 
 \newcommand{\runsubsection}[1]{
 \color{subheadings}\fontspec{Chivo}\fontsize{11pt}{12pt}\selectfont\bfseries\uppercase {#1} \normalfont}
 
 % Descriptors command
 \newcommand{\descript}[1]{
-\color{subheadings}\raggedright\scshape\fontspec{Chivo}\fontsize{11pt}{13pt}\selectfont {#1 \\} \normalfont}
+\color{subheadings}\raggedright\scshape\fontspec{Chivo}\fontsize{11pt}{12pt}\selectfont {#1 \\} \normalfont}
 
 % Location command
 \newcommand{\location}[1]{
@@ -73,3 +75,7 @@
 \newenvironment{tightemize}{
 \vspace{-\topsep}\begin{itemize}\renewcommand\labelitemi{-}\itemsep1pt \parskip0pt \parsep0pt}
 {\end{itemize}\vspace{-\topsep}}
+
+% content command
+\newcommand{\content}[1]{
+\scshape\color{primary}\fontspec{Chivo}\fontsize{11pt}{12pt}\selectfont {#1} \normalfont}
