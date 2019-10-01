@@ -11,16 +11,18 @@
 % Color definitions
 \usepackage[usenames,dvipsnames]{xcolor} 
 \definecolor{primary}{HTML}{666666} 
-\definecolor{headings}{HTML}{6A6A6A}
+\definecolor{headings}{HTML}{666666}
 \definecolor{subheadings}{HTML}{333333}
 
 % Sets default fonts
 \usepackage{fontspec}
-\usepackage{xcolor}
-\usepackage[familydefault,light]{Chivo} %% Option 'familydefault' only if the base font of the document is to be sans serif
-\usepackage[default]{cantarell} %% Use option "defaultsans" to use cantarell as sans serif only
-\usepackage[T1]{fontenc}
-\setmainfont[Color=primary]{cantarell}
+% \usepackage{xcolor}
+
+
+\setmainfont[Color=primary, Extension = .otf, Path = fonts/Cantarell/, BoldFont=Cantarell-Bold]{Cantarell-Regular}
+\newcommand{\boldText}[1]{
+    {\color{subheadings}\fontspec[Path = fonts/Chivo/]{Chivo-Medium}\selectfont{#1}\normalfont}
+}
 
 
 %%%%%% Begin Sections commands
@@ -54,28 +56,36 @@
 
 % Headings command
 \titleformat{\section}{\color{headings}
-\scshape\fontspec{Chivo}\fontsize{16pt}{24pt}\selectfont \raggedright}{}{0em}{}
+\scshape\fontspec[Path = fonts/Chivo/]{Chivo-Thin}\fontsize{16pt}{24pt}\selectfont \raggedright}{}{0em}{}
 
 % Subheadings command
 \titleformat{\subsection}{
-\color{subheadings}\fontspec{Chivo}\fontsize{11pt}{12pt}\selectfont\bfseries\uppercase}{}{0em}{}
+\color{subheadings}\fontspec[Path = fonts/Chivo/]{Chivo-Medium}\fontsize{11pt}{12pt}\selectfont\uppercase}{}{0em}{}
 
 \newcommand{\runsubsection}[1]{
-\color{subheadings}\fontspec{Chivo}\fontsize{11pt}{12pt}\selectfont\bfseries\uppercase {#1} \normalfont}
+\color{subheadings}\fontspec[Path = fonts/Chivo/]{Chivo-Medium}\fontsize{11pt}{12pt}\selectfont\uppercase {#1} \normalfont}
 
 % Descriptors command
 \newcommand{\descript}[1]{
-\color{subheadings}\raggedright\scshape\fontspec{Chivo}\fontsize{11pt}{12pt}\selectfont {#1 \\} \normalfont}
+\color{subheadings}\raggedright\scshape\fontspec[Path = fonts/Chivo/]{Chivo-Thin}\fontsize{11pt}{12pt}\selectfont {#1 \\} \normalfont}
+
+% Location (Indent) command
+\newcommand{\locationI}[1]{
+\color{headings}\raggedright\fontspec[Path = fonts/Chivo/]{Chivo-Thin}\fontsize{11pt}{12pt}\selectfont {\leftskip.2cm #1\\} \normalfont}
 
 % Location command
 \newcommand{\location}[1]{
-\color{headings}\raggedright\fontspec{Chivo}\fontsize{11pt}{12pt}\selectfont {#1\\} \normalfont}
+\color{headings}\raggedright\fontspec[Path = fonts/Chivo/]{Chivo-Thin}\fontsize{11pt}{12pt}\selectfont {#1\\} \normalfont}
 
 % Bullet Lists with fewer gaps command
 \newenvironment{tightemize}{
 \vspace{-\topsep}\begin{itemize}\renewcommand\labelitemi{-}\itemsep1pt \parskip0pt \parsep0pt}
 {\end{itemize}\vspace{-\topsep}}
 
+% content (Indent) command
+\newcommand{\contentI}[1]{
+\color{primary}\fontspec[Path = fonts/Chivo/]{Chivo-Thin}\fontsize{11pt}{12pt}\selectfont{\leftskip.2cm #1} \normalfont}
+
 % content command
 \newcommand{\content}[1]{
-\scshape\color{primary}\fontspec{Chivo}\fontsize{11pt}{12pt}\selectfont {#1} \normalfont}
+\scshape\color{primary}\fontspec[Path = fonts/Chivo/]{Chivo-Thin}\fontsize{11pt}{12pt}\selectfont{#1} \normalfont}
